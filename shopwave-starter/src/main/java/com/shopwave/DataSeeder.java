@@ -45,10 +45,19 @@ public class DataSeeder implements CommandLineRunner {
         );
 
         productRepository.save(Product.builder()
-                .name("Smartphone X")
+                .name("iPhone")
                 .description("Latest generation smartphone with advanced features")
                 .price(new BigDecimal("999.99"))
                 .stock(40)
+                .category(electronics)
+                .build()
+        );
+
+        productRepository.save(Product.builder()
+                .name("Wireless Headphones")
+                .description("Noise-cancelling over-ear headphones")
+                .price(new BigDecimal("249.99"))
+                .stock(100)
                 .category(electronics)
                 .build()
         );
